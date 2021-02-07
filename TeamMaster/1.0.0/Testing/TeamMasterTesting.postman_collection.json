@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "61f5b054-5291-438c-9718-7a1e828d66b0",
+		"name": "TeamMasterTesting",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get-Users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "0b9baf7d-7c6e-3079-bf4a-d79c60a69610",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://gateway.api.cloud.wso2.com/t/development/v1/1.0.0/users",
+					"protocol": "https",
+					"host": [
+						"gateway",
+						"api",
+						"cloud",
+						"wso2",
+						"com"
+					],
+					"path": [
+						"t",
+						"development",
+						"v1",
+						"1.0.0",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Baskets",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "0b9baf7d-7c6e-3079-bf4a-d79c60a69610",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://gateway.api.cloud.wso2.com/t/development/v1/1.0.0/baskets",
+					"protocol": "https",
+					"host": [
+						"gateway",
+						"api",
+						"cloud",
+						"wso2",
+						"com"
+					],
+					"path": [
+						"t",
+						"development",
+						"v1",
+						"1.0.0",
+						"baskets"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
