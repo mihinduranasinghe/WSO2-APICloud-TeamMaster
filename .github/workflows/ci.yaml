@@ -21,4 +21,4 @@ jobs:
           APIVersion: "1.0.0"
           needAPIAccessToken: TRUE # Not a compulsory input
           testingAppName: "ApplicationForTesting" # Not a compulsory input
-          # PostmanCollectionTestFile: "sample_store.postman_collection.json" # Not a compulsory input
+          PostmanCollectionTestFile: "TeamMasterTesting.postman_collection.json" # Not a compulsory input
