@@ -1,0 +1,51 @@
+name: WSO2 APIManager Cloud CICD - Petstore API
+on:
+  push:
+    branches: [main, prod]
+
+jobs:
+  apim-cloud-cicd:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cloning repo files into VM
+        uses: actions/checkout@v2.3.4
+
+      # Reusable code chunk - Copy this below code chunk and use with your requirement.
+      - name: TeamMaster v1.0.0 deploying to development tenant
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: mihinduranasinghe/WSO2-APIManager-Cloud-CICD-Beta@v3.2.0
+        with:
+          usernameTargetedTenant: "mihindu@wso2.com@development"
+          passwordTargetedTenant: ${{secrets.PASSWORD}}
+          APIName: "TeamMaster"
+          APIVersion: "1.0.0"
+          needAPIAccessToken: TRUE # Not a compulsory input
+          testingAppName: "ApplicationForTesting" # Not a compulsory input
+          PostmanCollectionTestFile: "TeamMasterTesting.postman_collection.json" # Not a compulsory input
+
+      - name: TeamMaster v2.0.0 deploying to development tenant
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: mihinduranasinghe/WSO2-APIManager-Cloud-CICD-Beta@v3.2.0
+        with:
+          usernameTargetedTenant: "mihindu@wso2.com@development"
+          passwordTargetedTenant: ${{secrets.PASSWORD}}
+          APIName: "TeamMaster"
+          APIVersion: "2.0.0"
+
+      - name: TeamMaster v1.0.0 deploying to production tenant
+        if: github.event_name == 'push' && github.ref == 'refs/heads/prod'
+        uses: mihinduranasinghe/WSO2-APIManager-Cloud-CICD-Beta@v3.2.0
+        with:
+          usernameTargetedTenant: "mihindu@wso2.com@production"
+          passwordTargetedTenant: ${{secrets.PASSWORD}}
+          APIName: "TeamMaster"
+          APIVersion: "1.0.0"
+
+      - name: TeamMaster v2.0.0 deploying to production tenant
+        if: github.event_name == 'push' && github.ref == 'refs/heads/prod'
+        uses: mihinduranasinghe/WSO2-APIManager-Cloud-CICD-Beta@v3.2.0
+        with:
+          usernameTargetedTenant: "mihindu@wso2.com@production"
+          passwordTargetedTenant: ${{secrets.PASSWORD}}
+          APIName: "TeamMaster"
+          APIVersion: "2.0.0"

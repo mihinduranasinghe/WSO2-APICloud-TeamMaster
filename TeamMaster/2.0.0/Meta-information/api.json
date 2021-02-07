@@ -1,0 +1,147 @@
+{
+  "id": {
+    "providerName": "mihindu-AT-wso2.com-AT-development",
+    "apiName": "TeamMaster",
+    "version": "2.0.0"
+  },
+  "uuid": "66056961-4b0c-4d26-93a8-505548c7cf24",
+  "description": "Sample Desfcription",
+  "type": "HTTP",
+  "context": "/t/development/v1/2.0.0",
+  "contextTemplate": "/t/development/v1/{version}",
+  "tags": [],
+  "documents": [],
+  "lastUpdated": "Feb 6, 2021 9:55:05 PM",
+  "availableTiers": [
+    {
+      "name": "Bronze",
+      "displayName": "Bronze",
+      "description": "Allows 1000 requests per minute",
+      "requestsPerMin": 1000,
+      "requestCount": 1000,
+      "unitTime": 1,
+      "timeUnit": "min",
+      "tierPlan": "FREE",
+      "stopOnQuotaReached": true
+    },
+    {
+      "name": "Gold",
+      "displayName": "Gold",
+      "description": "Allows 5000 requests per minute",
+      "requestsPerMin": 5000,
+      "requestCount": 5000,
+      "unitTime": 1,
+      "timeUnit": "min",
+      "tierPlan": "FREE",
+      "stopOnQuotaReached": true
+    },
+    {
+      "name": "Silver",
+      "displayName": "Silver",
+      "description": "Allows 2000 requests per minute",
+      "requestsPerMin": 2000,
+      "requestCount": 2000,
+      "unitTime": 1,
+      "timeUnit": "min",
+      "tierPlan": "FREE",
+      "stopOnQuotaReached": true
+    },
+    {
+      "name": "Unlimited",
+      "displayName": "Unlimited",
+      "description": "Allows unlimited requests",
+      "requestsPerMin": 2147483647,
+      "requestCount": 2147483647,
+      "unitTime": 0,
+      "timeUnit": "ms",
+      "tierPlan": "FREE",
+      "stopOnQuotaReached": true
+    }
+  ],
+  "availableSubscriptionLevelPolicies": [],
+  "uriTemplates": [
+    {
+      "uriTemplate": "/users",
+      "httpVerb": "POST",
+      "authType": "Any",
+      "httpVerbs": ["POST", "GET", "DELETE", "PUT"],
+      "authTypes": ["Any", "Any", "Any", "Any"],
+      "throttlingConditions": [],
+      "throttlingTier": "Unlimited",
+      "throttlingTiers": ["Unlimited", "Unlimited", "Unlimited", "Unlimited"],
+      "mediationScript": "null",
+      "scopes": [null, null, null, null],
+      "mediationScripts": {}
+    },
+    {
+      "uriTemplate": "/baskets",
+      "httpVerb": "GET",
+      "authType": "Any",
+      "httpVerbs": ["GET"],
+      "authTypes": ["Any"],
+      "throttlingConditions": [],
+      "throttlingTier": "Unlimited",
+      "throttlingTiers": ["Unlimited"],
+      "mediationScript": "null",
+      "scopes": [null],
+      "mediationScripts": {}
+    },
+    {
+      "uriTemplate": "/project",
+      "httpVerb": "GET",
+      "authType": "Any",
+      "httpVerbs": ["GET"],
+      "authTypes": ["Any"],
+      "throttlingConditions": [],
+      "throttlingTier": "Unlimited",
+      "throttlingTiers": ["Unlimited"],
+      "mediationScript": "null",
+      "scopes": [null],
+      "mediationScripts": {}
+    }
+  ],
+  "apiHeaderChanged": false,
+  "apiResourcePatternsChanged": false,
+  "status": "PUBLISHED",
+  "visibility": "public",
+  "endpointSecured": false,
+  "endpointAuthDigest": false,
+  "transports": "http,https",
+  "advertiseOnly": false,
+  "subscriptionAvailability": "current_tenant",
+  "corsConfiguration": {
+    "corsConfigurationEnabled": true,
+    "accessControlAllowOrigins": ["*"],
+    "accessControlAllowCredentials": false,
+    "accessControlAllowHeaders": [
+      "authorization",
+      "Access-Control-Allow-Origin",
+      "Content-Type",
+      "SOAPAction",
+      "X-Authorization"
+    ],
+    "accessControlAllowMethods": [
+      "GET",
+      "PUT",
+      "POST",
+      "DELETE",
+      "PATCH",
+      "OPTIONS"
+    ]
+  },
+  "endpointConfig": "{\"production_endpoints\":{\"url\":\"https://teammaster-api-backend.herokuapp.com/api\",\"config\":null,\"template_not_supported\":false},\"sandbox_endpoints\":{\"url\":\"https://teammaster-api-backend.herokuapp.com/api\",\"config\":null,\"template_not_supported\":false},\"endpoint_type\":\"http\"}",
+  "responseCache": "Disabled",
+  "cacheTimeout": 300,
+  "implementation": "ENDPOINT",
+  "scopes": [],
+  "isDefaultVersion": false,
+  "isPublishedDefaultVersion": false,
+  "environments": ["Production and Sandbox"],
+  "createdTime": "1612676581000",
+  "additionalProperties": {},
+  "environmentList": ["SANDBOX", "PRODUCTION"],
+  "apiSecurity": "oauth2",
+  "accessControl": "all",
+  "rating": 0.0,
+  "isLatest": true
+}
